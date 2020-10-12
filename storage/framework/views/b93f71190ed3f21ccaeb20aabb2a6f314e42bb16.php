@@ -125,4 +125,4 @@
 </body>
 
 </html>
-<?php /**PATH E:\Web\dinkes-melawi-corona\resources\views/layouts/public.blade.php ENDPATH**/ ?>
+<?php /**PATH /home/fatdev/Developments/Web/App/covidApp-dinkes-melawi/resources/views/layouts/public.blade.php ENDPATH**/ ?>
