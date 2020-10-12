@@ -10,10 +10,26 @@
                     </div>
                     <div class="card-body">
                         <div class="mb-4">
-                            <h5 class="mb-0">Laporan Harian Internal</h5>
+                            <h5 class="mb-0">Laporan Internal</h5>
+                            <a href="/admin/download/laporan/total/internal" type="button" rel="tooltip"
+                                class="btn btn-info">
+                                Total
+                            </a>
                             <a href="/admin/download/laporan/harian/internal" type="button" rel="tooltip"
                                 class="btn btn-info">
-                                Laporan Harian Internal
+                                Harian
+                            </a>
+                            <a href="/admin/download/laporan/total/reactive" type="button" rel="tooltip"
+                                class="btn btn-info">
+                                Reactive
+                            </a>
+                        </div>
+
+                        <div class="mb-4">
+                            <h5 class="mb-0">Laporan Pelaku Perjalanan</h5>
+                            <a href="/admin/download/laporan/harian/perjalanan" type="button" rel="tooltip"
+                                class="btn btn-primary">
+                                Harian
                             </a>
                         </div>
 
@@ -31,47 +47,47 @@
 
                         <div class="mb-4">
                             <h5 class="mb-0">Laporan Total per Kecamatan (Kepala Puskesmas)</h5>
-                            <a href="/admin/download/laporan/harian/provinsi/odp" type="button" rel="tooltip"
+                            <a href="/admin/download/laporan/total/kecamatan/7" type="button" rel="tooltip"
                                 class="btn btn-success">
                                 Nanga Pinoh
                             </a>
-                            <a href="/admin/download/laporan/harian/provinsi/odp" type="button" rel="tooltip"
+                            <a href="/admin/download/laporan/total/kecamatan/8" type="button" rel="tooltip"
                                 class="btn btn-success">
                                 Pinoh Utara
                             </a>
-                            <a href="/admin/download/laporan/harian/provinsi/odp" type="button" rel="tooltip"
+                            <a href="/admin/download/laporan/total/kecamatan/6" type="button" rel="tooltip"
                                 class="btn btn-success">
                                 Pinoh Selatan
                             </a>
-                            <a href="/admin/download/laporan/harian/provinsi/odp" type="button" rel="tooltip"
+                            <a href="/admin/download/laporan/total/kecamatan/0" type="button" rel="tooltip"
                                 class="btn btn-success">
                                 Sokan
                             </a>
-                            <a href="/admin/download/laporan/harian/provinsi/odp" type="button" rel="tooltip"
+                            <a href="/admin/download/laporan/total/kecamatan/1" type="button" rel="tooltip"
                                 class="btn btn-success">
                                 Tanah Pinoh Barat
                             </a>
-                            <a href="/admin/download/laporan/harian/provinsi/odp" type="button" rel="tooltip"
+                            <a href="/admin/download/laporan/total/kecamatan/2" type="button" rel="tooltip"
                                 class="btn btn-success">
                                 Tanah Pinoh
                             </a>
-                            <a href="/admin/download/laporan/harian/provinsi/odp" type="button" rel="tooltip"
+                            <a href="/admin/download/laporan/total/kecamatan/3" type="button" rel="tooltip"
                                 class="btn btn-success">
                                 Sayan
                             </a>
-                            <a href="/admin/download/laporan/harian/provinsi/odp" type="button" rel="tooltip"
+                            <a href="/admin/download/laporan/total/kecamatan/4" type="button" rel="tooltip"
                                 class="btn btn-success">
                                 Belimbing Hulu
                             </a>
-                            <a href="/admin/download/laporan/harian/provinsi/odp" type="button" rel="tooltip"
+                            <a href="/admin/download/laporan/total/kecamatan/5" type="button" rel="tooltip"
                                 class="btn btn-success">
                                 Belimbing
                             </a>
-                            <a href="/admin/download/laporan/harian/provinsi/odp" type="button" rel="tooltip"
+                            <a href="/admin/download/laporan/total/kecamatan/9" type="button" rel="tooltip"
                                 class="btn btn-success">
                                 Ella Hilir
                             </a>
-                            <a href="/admin/download/laporan/harian/provinsi/odp" type="button" rel="tooltip"
+                            <a href="/admin/download/laporan/total/kecamatan/10" type="button" rel="tooltip"
                                 class="btn btn-success">
                                 Menukung
                             </a>
@@ -112,4 +128,4 @@
 </script>
 <?php $__env->stopSection(); ?>
 
-<?php echo $__env->make('layouts.admin', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH E:\Web\dinkes-melawi-corona\resources\views/admin/report.blade.php ENDPATH**/ ?>
+<?php echo $__env->make('layouts.admin', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH /home/u6434366/public_html/xProductionx/covid-2020/resources/views/admin/report.blade.php ENDPATH**/ ?>

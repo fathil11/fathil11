@@ -60,4 +60,4 @@
         </div>
     </body>
 </html>
-<?php /**PATH E:\Web\dinkes-melawi-corona\vendor\laravel\framework\src\Illuminate\Foundation\Exceptions/views/minimal.blade.php ENDPATH**/ ?>
+<?php /**PATH /home/u6434366/public_html/xProductionx/covid-2020/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/views/minimal.blade.php ENDPATH**/ ?>

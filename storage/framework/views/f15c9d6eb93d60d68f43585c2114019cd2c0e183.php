@@ -55,6 +55,12 @@
                             <p>Lihat Seluruh Orang</p>
                         </a>
                     </li>
+                    <li class="nav-item <?php if(request()->is('admin/orang/pendatang')): ?> active <?php endif; ?>">
+                        <a class="nav-link" href="/admin/orang/pendatang">
+                            <i class="material-icons">people</i>
+                            <p>Lihat Pendatang</p>
+                        </a>
+                    </li>
                     <li class="nav-item <?php if(request()->is('admin/orang/rapid-test')): ?> active <?php endif; ?>">
                         <a class="nav-link" href="/admin/orang/rapid-test">
                             <i class="material-icons">offline_bolt</i>
@@ -77,6 +83,24 @@
                         <a class="nav-link" href="/admin/orang/pdp">
                             <i class="material-icons">local_convenience_store</i>
                             <p>Kelola PDP</p>
+                        </a>
+                    </li>
+                    <li class="nav-item <?php if(request()->is('admin/peta')): ?> active <?php endif; ?>">
+                        <a class="nav-link" href="/admin/peta">
+                            <i class="material-icons">map</i>
+                            <p>Peta</p>
+                        </a>
+                    </li>
+                    <li class="nav-item <?php if(request()->is('admin/manual')): ?> active <?php endif; ?>">
+                        <a class="nav-link" href="/admin/manual">
+                            <i class="material-icons">trip_origin</i>
+                            <p>Manual</p>
+                        </a>
+                    </li>
+                    <li class="nav-item <?php if(request()->is('admin/laporan')): ?> active <?php endif; ?>">
+                        <a class="nav-link" href="/admin/laporan">
+                            <i class="material-icons">book</i>
+                            <p>Laporan</p>
                         </a>
                     </li>
                     <li class="nav-item ">
@@ -145,10 +169,11 @@
     <script src="<?php echo e(asset('js/admin/jquery.dataTables.min.js')); ?>"></script>
     <script src="https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.min.js"></script>
 
-    <script src="<?php echo e(asset('js/admin/material-dashboard.js')); ?>"></script>
+    
+    <script src="<?php echo e(asset('js/admin/material-dashboard.js?v=2.1.2')); ?>"></script>
     <?php echo $__env->yieldContent('js'); ?>
 
 </body>
 
 </html>
-<?php /**PATH /mnt/e/Web/dinkes-melawi-corona/resources/views/layouts/admin.blade.php ENDPATH**/ ?>
+<?php /**PATH /home/u6434366/public_html/xProductionx/covid-2020/resources/views/layouts/admin.blade.php ENDPATH**/ ?>

@@ -104,4 +104,4 @@ unset($__errorArgs, $__bag); ?>
 </body>
 
 </html>
-<?php /**PATH /mnt/e/Web/dinkes-melawi-corona/resources/views/public/login.blade.php ENDPATH**/ ?>
+<?php /**PATH /home/u6434366/public_html/xProductionx/covid-2020/resources/views/public/login.blade.php ENDPATH**/ ?>

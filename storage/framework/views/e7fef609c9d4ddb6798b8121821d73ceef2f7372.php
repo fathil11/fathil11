@@ -1,4 +1,4 @@
-<?php $__env->startSection('title', 'Rapid Tes'); ?>
+<?php $__env->startSection('title', 'Daftar Orang'); ?>
 <?php $__env->startSection('content'); ?>
 <div class="content">
     <div class="container-fluid">
@@ -52,10 +52,13 @@
                                         Kecamatan
                                     </th>
                                     <th class="text-center">
-                                        Status
+                                        Desa
                                     </th>
                                     <th class="text-center">
-                                        Rapid Tes
+                                        Gejala
+                                    </th>
+                                    <th class="text-center">
+                                        Status
                                     </th>
                                     <th class="text-center">
                                         Aksi
@@ -89,38 +92,25 @@
 
                                         </td>
                                         <td class="text-center">
-                                            <div class="font-weight-bold"><?php echo e($person->status); ?></div>
+                                            <?php echo e($person->village); ?>
+
                                         </td>
                                         <td class="text-center">
-                                            <?php if($person->logs->last()->status == 9): ?>
-                                            Reaktif
-                                            <?php elseif($person->logs->last()->status == 10): ?>
-                                            Non Reaktif
-                                            <?php else: ?>
-                                            ?
-                                            <?php endif; ?>
+                                            <?php echo e($person->phenomenon); ?>
+
+                                        </td>
+                                        <td class="text-center">
+                                            <div class="font-weight-bold"><?php echo e($person->status); ?></div>
                                         </td>
                                         <td class="td-actions text-center text-white">
-                                            <?php if($person->logs->last()->status == 10): ?>
-                                            <a href="/admin/orang/<?php echo e($person->id); ?>/reaktif" type="button" rel="tooltip"
-                                                class="btn btn-info">
-                                                Reaktif
+                                            <a href="/admin/orang/<?php echo e($person->id); ?>/edit" type="button" rel="tooltip"
+                                                class="btn btn-warning">
+                                                <i class="material-icons">edit</i>
                                             </a>
-                                            <?php elseif($person->logs->last()->status == 9): ?>
-                                            <a href="/admin/orang/<?php echo e($person->id); ?>/non-reaktif" type="button"
-                                                rel="tooltip" class="btn btn-info">
-                                                Non Reaktif
+                                            <a href="/admin/orang/<?php echo e($person->id); ?>/delete" type="button" rel="tooltip"
+                                                class="btn btn-danger">
+                                                <i class="material-icons">close</i>
                                             </a>
-                                            <?php else: ?>
-                                            <a href="/admin/orang/<?php echo e($person->id); ?>/reaktif" type="button" rel="tooltip"
-                                                class="btn btn-info">
-                                                Reaktif
-                                            </a>
-                                            <a href="/admin/orang/<?php echo e($person->id); ?>/non-reaktif" type="button"
-                                                rel="tooltip" class="btn btn-info">
-                                                Non Reaktif
-                                            </a>
-                                            <?php endif; ?>
                                         </td>
                                     </tr>
                                     <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
@@ -162,4 +152,4 @@
 </script>
 <?php $__env->stopSection(); ?>
 
-<?php echo $__env->make('layouts.admin', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH /mnt/e/Web/dinkes-melawi-corona/resources/views/admin/rapid.blade.php ENDPATH**/ ?>
+<?php echo $__env->make('layouts.admin', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH /home/u6434366/public_html/xProductionx/covid-2020/resources/views/admin/allPeople.blade.php ENDPATH**/ ?>
