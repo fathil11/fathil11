@@ -18,8 +18,13 @@ class PublicController extends Controller
 {
     public function index()
     {
+<<<<<<< HEAD
         $gSheet = new GoogleSheet();
         $data = $gSheet->collection("1CPNkgbLJaE5m3Rbe8dCg4twdUohF2wIX2WW_mvjXhRQ", "Sheet1");
+=======
+        dd("Under Maintenance");
+        $data = SpreadsheetCollection::get('https://docs.google.com/spreadsheets/d/1CPNkgbLJaE5m3Rbe8dCg4twdUohF2wIX2WW_mvjXhRQ/edit#gid=0')->getContent(1);
+>>>>>>> 39c49287350180ff2b5d556e6b4891a7a7f413b9
         $data = $data->last();
         $data['Update'] = Carbon::make($data['Update'])->setTimezone('Asia/Jakarta')->locale('id')->diffForHumans();
         return view('public.home', compact('data'));
