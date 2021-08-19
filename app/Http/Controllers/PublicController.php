@@ -16,6 +16,7 @@ class PublicController extends Controller
 {
     public function index()
     {
+        dd("Under Maintenance");
         $data = SpreadsheetCollection::get('https://docs.google.com/spreadsheets/d/1CPNkgbLJaE5m3Rbe8dCg4twdUohF2wIX2WW_mvjXhRQ/edit#gid=0')->getContent(1);
         $data = $data->last();
         $data['Update'] = Carbon::make($data['Update'])->setTimezone('Asia/Jakarta')->locale('id')->diffForHumans();
