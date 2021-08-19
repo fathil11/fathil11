@@ -2,21 +2,24 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
-use App\Statistic;
-use App\Person;
-use App\Post;
 use App\Log;
+use App\Post;
 use App\Manual;
+use App\Person;
+use App\Statistic;
 use Carbon\Carbon;
+use Illuminate\Http\Request;
+use App\Services\GoogleSheet;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 use Fathilarham\SpreadsheetCollection\SpreadsheetCollection;
 
 class PublicController extends Controller
 {
     public function index()
     {
-        $data = SpreadsheetCollection::get('https://docs.google.com/spreadsheets/d/1CPNkgbLJaE5m3Rbe8dCg4twdUohF2wIX2WW_mvjXhRQ/edit#gid=0')->getContent(1);
+        $gSheet = new GoogleSheet();
+        $data = $gSheet->collection("1CPNkgbLJaE5m3Rbe8dCg4twdUohF2wIX2WW_mvjXhRQ", "Sheet1");
         $data = $data->last();
         $data['Update'] = Carbon::make($data['Update'])->setTimezone('Asia/Jakarta')->locale('id')->diffForHumans();
         return view('public.home', compact('data'));
